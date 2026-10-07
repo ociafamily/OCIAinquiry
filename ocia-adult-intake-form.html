@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCIA Adult Intake Form</title>
+<style>
+  :root {
+    --parish-red: #7a1115;
+    --parish-red-dark: #5a0c0f;
+    --bg: #faf8f6;
+    --text: #2a2a2a;
+    --border: #d9cfc9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0 16px 60px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header {
+    border-bottom: 4px solid var(--parish-red);
+    padding: 32px 0 20px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    color: var(--parish-red);
+    font-size: 1.8rem;
+    margin: 0 0 8px;
+  }
+  header p { margin: 0; line-height: 1.5; }
+  .notice {
+    background: #fff;
+    border-left: 4px solid var(--parish-red);
+    padding: 14px 18px;
+    margin: 0 0 28px;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .notice strong { color: var(--parish-red-dark); }
+  section {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 22px 24px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    color: var(--parish-red);
+    font-size: 1.15rem;
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .field { margin-bottom: 16px; }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+  }
+  .hint {
+    font-weight: normal;
+    font-style: italic;
+    color: #555;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 2px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #b9aca4;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #fff;
+  }
+  textarea { resize: vertical; min-height: 70px; }
+  .radio-row, .checkbox-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+  .radio-row label, .checkbox-row label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 560px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+  .file-field {
+    border: 1px dashed #b9aca4;
+    border-radius: 4px;
+    padding: 12px;
+    background: #fbf7f4;
+  }
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    background: var(--parish-red);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    font-size: 1.05rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  button[type="submit"]:hover { background: var(--parish-red-dark); }
+  .config-note {
+    background: #fff3e0;
+    border: 1px dashed #c98a1f;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>OCIA Adult Intake Form</h1>
+    <p>Order of Christian Initiation for Adults &mdash; please complete this form so we can get to know you and plan for your formation. All information is kept confidential within the OCIA team.</p>
+  </header>
+
+  <div class="notice">
+    <strong>Documents needed:</strong> Please bring a copy of your <strong>birth certificate</strong> and a copy of your <strong>driver's license or state/government-issued ID</strong> to your first meeting. These are needed for your sacramental and parish records.
+  </div>
+
+  <form action="https://formspree.io/f/moevgbnp" method="POST">
+
+    <section>
+      <h2>Personal &amp; Contact Information</h2>
+      <div class="two-col">
+        <div class="field">
+          <label for="full_name">Full legal name</label>
+          <input type="text" id="full_name" name="Full legal name" required>
+        </div>
+        <div class="field">
+          <label for="preferred_name">Preferred name (if different)</label>
+          <input type="text" id="preferred_name" name="Preferred name">
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="field">
+          <label for="dob">Date of birth</label>
+          <input type="date" id="dob" name="Date of birth" required>
+        </div>
+        <div class="field">
+          <label for="pob">Place of birth (city, state/country)</label>
+          <input type="text" id="pob" name="Place of birth">
+        </div>
+      </div>
+      <div class="field">
+        <label for="address">Home address</label>
+        <input type="text" id="address" name="Home address" required>
+      </div>
+      <div class="two-col">
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="Phone number" required>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="Email address" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="occupation">Occupation</label>
+        <input type="text" id="occupation" name="Occupation">
+      </div>
+      <div class="field">
+        <label for="contact_pref">Preferred contact method</label>
+        <select id="contact_pref" name="Preferred contact method">
+          <option value="">Select one</option>
+          <option>Phone call</option>
+          <option>Text</option>
+          <option>Email</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="emergency">Emergency contact name &amp; phone</label>
+        <input type="text" id="emergency" name="Emergency contact">
+      </div>
+    </section>
+
+    <section>
+      <h2>Marital Status &amp; Marriage History</h2>
+      <p class="hint" style="margin-bottom:14px;">These questions help the parish address any marriage-related matters (such as annulment or convalidation) early, so they don't delay the process later.</p>
+
+      <div class="field">
+        <label>Are you currently married?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="Currently married" value="Yes"> Yes</label>
+          <label><input type="radio" name="Currently married" value="No"> No</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="spouse_name">If yes, spouse's full name</label>
+        <input type="text" id="spouse_name" name="Spouse full name">
+      </div>
+      <div class="field">
+        <label>If yes, is your spouse Catholic?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="Spouse Catholic" value="Yes"> Yes</label>
+          <label><input type="radio" name="Spouse Catholic" value="No"> No</label>
+          <label><input type="radio" name="Spouse Catholic" value="Not applicable"> N/A</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="marriage_type">If yes, were you married in the Catholic Church, another church, or civilly (courthouse/officiant)?</label>
+        <input type="text" id="marriage_type" name="Marriage type">
+      </div>
+      <div class="field">
+        <label for="marriage_date_place">If yes, date and place of marriage</label>
+        <input type="text" id="marriage_date_place" name="Marriage date and place">
+      </div>
+      <div class="field">
+        <label>Have you ever been married before (even if that marriage ended)?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="Previously married" value="Yes"> Yes</label>
+          <label><input type="radio" name="Previously married" value="No"> No</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="num_prior_marriages">If yes, how many previous marriages?</label>
+        <input type="text" id="num_prior_marriages" name="Number of previous marriages">
+      </div>
+      <div class="field">
+        <label for="how_ended">How did each previous marriage end (death, divorce, annulment)?</label>
+        <textarea id="how_ended" name="How previous marriages ended"></textarea>
+      </div>
+      <div class="field">
+        <label for="annulment_status">If divorced, is a Catholic annulment in process or completed for any prior marriage?</label>
+        <input type="text" id="annulment_status" name="Annulment status">
+      </div>
+      <div class="field">
+        <label>Are you currently living with a partner outside of marriage?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="Living with partner" value="Yes"> Yes</label>
+          <label><input type="radio" name="Living with partner" value="No"> No</label>
+        </div>
+      </div>
+      <p class="hint">A prior marriage or divorce does not prevent you from beginning OCIA &mdash; these details simply help your priest or deacon guide you through any needed steps.</p>
+    </section>
+
+    <section>
+      <h2>Sacramental &amp; Baptismal History</h2>
+      <div class="field">
+        <label>Have you been baptized?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="Baptized" value="Yes"> Yes</label>
+          <label><input type="radio" name="Baptized" value="No"> No</label>
+          <label><input type="radio" name="Baptized" value="Not sure"> Not sure</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="baptism_denom">If yes, in what denomination/tradition?</label>
+        <input type="text" id="baptism_denom" name="Baptism denomination">
+      </div>
+      <div class="field">
+        <label for="baptism_date_place">Date and place of baptism (church, city)</label>
+        <input type="text" id="baptism_date_place" name="Baptism date and place">
+      </div>
+      <div class="field">
+        <label>Do you have (or can you obtain) a baptismal certificate?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="Baptismal certificate" value="Yes"> Yes</label>
+          <label><input type="radio" name="Baptismal certificate" value="No"> No</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>If baptized Catholic, have you received First Communion?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="First Communion" value="Yes"> Yes</label>
+          <label><input type="radio" name="First Communion" value="No"> No</label>
+          <label><input type="radio" name="First Communion" value="Not applicable"> N/A</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>If baptized Catholic, have you received Confirmation?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="Confirmation" value="Yes"> Yes</label>
+          <label><input type="radio" name="Confirmation" value="No"> No</label>
+          <label><input type="radio" name="Confirmation" value="Not applicable"> N/A</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="never_baptized_plan">If never baptized, is anyone planning a baptism for you (godparents, family)?</label>
+        <input type="text" id="never_baptized_plan" name="Never baptized plan">
+      </div>
+    </section>
+
+    <section>
+      <h2>Faith Background</h2>
+      <div class="field">
+        <label for="raised_tradition">What faith tradition (if any) were you raised in?</label>
+        <input type="text" id="raised_tradition" name="Raised tradition">
+      </div>
+      <div class="field">
+        <label for="current_church">Do you currently attend another church regularly?</label>
+        <input type="text" id="current_church" name="Current church attendance">
+      </div>
+      <div class="field">
+        <label for="catholic_family">Do you have family members who are Catholic?</label>
+        <input type="text" id="catholic_family" name="Catholic family members">
+      </div>
+      <div class="field">
+        <label>Have you previously attended OCIA/RCIA at this or another parish?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="Previous OCIA" value="Yes"> Yes</label>
+          <label><input type="radio" name="Previous OCIA" value="No"> No</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="previous_ocia_detail">If yes, when and where, and why did you not complete it?</label>
+        <textarea id="previous_ocia_detail" name="Previous OCIA detail"></textarea>
+      </div>
+    </section>
+
+    <section>
+      <h2>Your Inquiry</h2>
+      <div class="field">
+        <label for="drawing_to_faith">What is drawing you to explore the Catholic faith at this time?</label>
+        <textarea id="drawing_to_faith" name="Drawing to faith" required></textarea>
+      </div>
+      <div class="field">
+        <label for="faith_questions">What questions about the faith do you have?</label>
+        <textarea id="faith_questions" name="Faith questions"></textarea>
+      </div>
+      <div class="field">
+        <label for="relationship_with_god">What is your relationship like with God right now?</label>
+        <textarea id="relationship_with_god" name="Relationship with God"></textarea>
+      </div>
+    </section>
+
+    <section>
+      <h2>Household &amp; Family</h2>
+      <div class="field">
+        <label for="children">Do you have children? If so, names and ages</label>
+        <textarea id="children" name="Children"></textarea>
+      </div>
+      <div class="field">
+        <label for="children_re">Are any of your children currently enrolled in religious education at the parish?</label>
+        <input type="text" id="children_re" name="Children in religious education">
+      </div>
+      <div class="field">
+        <label for="household_inquiring">Are other household members also inquiring about OCIA?</label>
+        <input type="text" id="household_inquiring" name="Household also inquiring">
+      </div>
+      <div class="field">
+        <label for="accessibility">Any accessibility needs the parish should know about?</label>
+        <textarea id="accessibility" name="Accessibility needs"></textarea>
+      </div>
+    </section>
+
+    <button type="submit">Submit Intake Form</button>
+
+  </form>
+
+</div>
+</body>
+</html>

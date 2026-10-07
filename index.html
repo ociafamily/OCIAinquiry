@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCIA Inquiry — Start Here</title>
+<style>
+  :root {
+    --parish-red: #7a1115;
+    --parish-red-dark: #5a0c0f;
+    --bg: #faf8f6;
+    --text: #2a2a2a;
+    --border: #d9cfc9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0 16px 60px;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  header {
+    border-bottom: 4px solid var(--parish-red);
+    padding: 40px 0 24px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  h1 {
+    color: var(--parish-red);
+    font-size: 1.9rem;
+    margin: 0 0 10px;
+  }
+  header p {
+    margin: 0 auto;
+    line-height: 1.6;
+    max-width: 520px;
+  }
+  .config-note {
+    background: #fff3e0;
+    border: 1px dashed #c98a1f;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    margin-bottom: 28px;
+    border-radius: 4px;
+  }
+  .options {
+    display: grid;
+    gap: 20px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 26px;
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+  .card:hover {
+    border-color: var(--parish-red);
+    box-shadow: 0 2px 10px rgba(122, 17, 21, 0.1);
+  }
+  .card h2 {
+    color: var(--parish-red);
+    font-size: 1.2rem;
+    margin: 0 0 8px;
+  }
+  .card p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  .card .arrow {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: var(--parish-red-dark);
+  }
+  .contact {
+    margin-top: 36px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  .contact a { color: var(--parish-red-dark); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Exploring the Catholic Faith?</h1>
+    <p>Welcome. The OCIA (Order of Christian Initiation for Adults) team is glad you're here. Choose the option below that fits your situation, and we'll follow up with next steps.</p>
+  </header>
+
+  <div class="config-note">
+    <strong>Setup note (remove before publishing):</strong> This page links to <code>ocia-adult-intake-form.html</code> and <code>ocia-family-intake-form.html</code> &mdash; make sure all three files sit in the same GitHub Pages folder, or update the hrefs below to match where they land.
+  </div>
+
+  <div class="options">
+    <a class="card" href="ocia-adult-intake-form.html">
+      <h2>I'm an individual adult inquiring</h2>
+      <p>For adults exploring the Catholic faith on their own &mdash; whether never baptized, baptized in another tradition, or a baptized Catholic who hasn't received First Communion or Confirmation.</p>
+      <span class="arrow">Start the adult intake form &rarr;</span>
+    </a>
+
+    <a class="card" href="ocia-family-intake-form.html">
+      <h2>My family is inquiring together</h2>
+      <p>For households exploring the faith as a family &mdash; parents and children taking part in formation together through the OCIA Adapted for Families program.</p>
+      <span class="arrow">Start the family intake form &rarr;</span>
+    </a>
+  </div>
+
+  <div class="contact">
+    Not sure which one fits, or have a question before you start?<br>
+    Reach the OCIA team at <a href="mailto:ocia_family@sjbchico.org">ocia_family@sjbchico.org</a> or <a href="tel:5303438741">(530) 343-8741</a>.
+  </div>
+
+</div>
+</body>
+</html>
