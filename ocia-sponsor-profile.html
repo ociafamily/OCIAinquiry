@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sponsor/Godparent Matching — Sponsor Profile</title>
+<style>
+  :root {
+    --parish-red: #7a1115;
+    --parish-red-dark: #5a0c0f;
+    --bg: #faf8f6;
+    --text: #2a2a2a;
+    --border: #d9cfc9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0 16px 60px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header {
+    border-bottom: 4px solid var(--parish-red);
+    padding: 32px 0 20px;
+    margin-bottom: 24px;
+  }
+  h1 { color: var(--parish-red); font-size: 1.7rem; margin: 0 0 8px; }
+  header p { margin: 0; line-height: 1.5; }
+  .config-note {
+    background: #fff3e0;
+    border: 1px dashed #c98a1f;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+    border-radius: 4px;
+  }
+  .notice {
+    background: #fff;
+    border-left: 4px solid var(--parish-red);
+    padding: 14px 18px;
+    margin: 0 0 28px;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  section {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 22px 24px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    color: var(--parish-red);
+    font-size: 1.15rem;
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .field { margin-bottom: 16px; }
+  label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.95rem; }
+  .hint { font-weight: normal; font-style: italic; color: #555; font-size: 0.85rem; display: block; margin-top: 2px; }
+  input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+    width: 100%; padding: 9px 10px; border: 1px solid #b9aca4; border-radius: 4px;
+    font-family: inherit; font-size: 1rem; background: #fff;
+  }
+  textarea { resize: vertical; min-height: 60px; }
+  .radio-row, .checkbox-grid { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 4px; }
+  .checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .radio-row label, .checkbox-grid label { font-weight: normal; display: flex; align-items: center; gap: 6px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 560px) { .two-col, .checkbox-grid { grid-template-columns: 1fr; } }
+  button[type="submit"] {
+    display: block; width: 100%; background: var(--parish-red); color: #fff; border: none;
+    padding: 14px; font-size: 1.05rem; border-radius: 6px; cursor: pointer; font-family: inherit;
+  }
+  button[type="submit"]:hover { background: var(--parish-red-dark); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Sponsor/Godparent Profile</h1>
+    <p>Thank you for being willing to walk with a catechumen or candidate this year. This helps us pair you with someone you'll connect well with.</p>
+  </header>
+
+  <div class="notice">
+    <strong>Reminder:</strong> A sponsor must be a practicing, confirmed Catholic in good standing, at least 16 years old, and (if married) married validly in the Church.
+  </div>
+
+  <form action="https://formspree.io/f/mdeaewoj" method="POST">
+
+    <section>
+      <h2>Basic Information</h2>
+      <div class="two-col">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="Sponsor name" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="Sponsor phone">
+        </div>
+      </div>
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="Sponsor email">
+      </div>
+      <div class="field">
+        <label>Age range</label>
+        <select name="Sponsor age range">
+          <option value="">Select one</option>
+          <option>18–25</option>
+          <option>26–35</option>
+          <option>36–45</option>
+          <option>46–55</option>
+          <option>56–65</option>
+          <option>66+</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Have you served as a sponsor before?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="Previous sponsor experience" value="Yes"> Yes</label>
+          <label><input type="radio" name="Previous sponsor experience" value="No"> No, this is my first time</label>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Interests &amp; Personality</h2>
+      <div class="field">
+        <label>Which of these describe your interests? (check all that apply)</label>
+        <div class="checkbox-grid">
+          <label><input type="checkbox" name="Interests" value="Outdoors/hiking"> Outdoors/hiking</label>
+          <label><input type="checkbox" name="Interests" value="Cooking/baking"> Cooking/baking</label>
+          <label><input type="checkbox" name="Interests" value="Sports/fitness"> Sports/fitness</label>
+          <label><input type="checkbox" name="Interests" value="Reading/books"> Reading/books</label>
+          <label><input type="checkbox" name="Interests" value="Arts/crafts"> Arts/crafts</label>
+          <label><input type="checkbox" name="Interests" value="Music"> Music</label>
+          <label><input type="checkbox" name="Interests" value="Parenting/family life"> Parenting/family life</label>
+          <label><input type="checkbox" name="Interests" value="Volunteering/service"> Volunteering/service</label>
+          <label><input type="checkbox" name="Interests" value="Gaming/tech"> Gaming/tech</label>
+          <label><input type="checkbox" name="Interests" value="Theology/apologetics"> Theology/apologetics</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="interests_other">Other interests or hobbies</label>
+        <input type="text" id="interests_other" name="Other interests">
+      </div>
+      <div class="field">
+        <label>How would you describe your personality?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="Personality" value="Quiet/reflective"> Quiet/reflective</label>
+          <label><input type="radio" name="Personality" value="Outgoing/talkative"> Outgoing/talkative</label>
+          <label><input type="radio" name="Personality" value="A mix of both"> A mix of both</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>What life stage are you in?</label>
+        <div class="checkbox-grid">
+          <label><input type="checkbox" name="Life stage" value="Single"> Single</label>
+          <label><input type="checkbox" name="Life stage" value="Married"> Married</label>
+          <label><input type="checkbox" name="Life stage" value="Parent of young kids"> Parent of young kids</label>
+          <label><input type="checkbox" name="Life stage" value="Parent of teens/adult kids"> Parent of teens/adult kids</label>
+          <label><input type="checkbox" name="Life stage" value="Retired"> Retired</label>
+          <label><input type="checkbox" name="Life stage" value="Student"> Student</label>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Your Faith Journey &amp; Strengths</h2>
+      <div class="field">
+        <label for="journey">Briefly describe your own faith journey (cradle Catholic, revert, convert, etc.)</label>
+        <textarea id="journey" name="Sponsor faith journey"></textarea>
+      </div>
+      <div class="field">
+        <label>Where do you feel strongest in walking alongside someone? (check all that apply)</label>
+        <div class="checkbox-grid">
+          <label><input type="checkbox" name="Strengths" value="Answering faith questions"> Answering faith questions</label>
+          <label><input type="checkbox" name="Strengths" value="Praying together"> Praying together</label>
+          <label><input type="checkbox" name="Strengths" value="Listening/emotional support"> Listening/emotional support</label>
+          <label><input type="checkbox" name="Strengths" value="Modeling family life"> Modeling family life</label>
+          <label><input type="checkbox" name="Strengths" value="Being a consistent friend"> Being a consistent friend</label>
+          <label><input type="checkbox" name="Strengths" value="Explaining the Mass/sacraments"> Explaining the Mass/sacraments</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="similar_journey">Is there a type of person or background you'd connect well with (e.g., also a convert, a parent, a similar life stage)?</label>
+        <textarea id="similar_journey" name="Sponsor similar journey preference"></textarea>
+      </div>
+      <div class="field">
+        <label for="availability">What times/days generally work for you to meet with a catechumen/candidate?</label>
+        <input type="text" id="availability" name="Sponsor availability">
+      </div>
+      <div class="field">
+        <label>How many candidates/catechumens are you willing to sponsor this year?</label>
+        <select name="Sponsor capacity">
+          <option value="">Select one</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3 or more</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="anything_else">Anything else that would help us find a good match?</label>
+        <textarea id="anything_else" name="Sponsor additional notes"></textarea>
+      </div>
+    </section>
+
+    <button type="submit">Submit Sponsor Profile</button>
+
+  </form>
+
+</div>
+</body>
+</html>
